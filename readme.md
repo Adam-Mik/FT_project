@@ -1,7 +1,7 @@
-1. clone repository:
+1. Clone repository:
 git clone git@github.com:Adam-Mik/FT_project.git
 
-2. create venv:
+2. Create venv:
 python -m venv .venv
 
 3. Active virtual enviroment (on Windows):
