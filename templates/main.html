@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Try 1{% endblock %}
+
+{% block content %}
+    <h3>Add Expense</h3>
+    <form action="/" method="POST">
+        {{ form.csrf_token }}
+        <div>
+            {{ form.name.label }}<br>
+            {{ form.name(class="form-control") }}<br>
+            {% for error in form.name.errors %}
+                <span style="color: red;">{{ error }}</span><br>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.value.label }}<br>
+            {{ form.value(class="form-control") }}<br>
+            {% for error in form.value.errors %}
+                <span style="color: red;">{{ error }}</span><br>
+            {% endfor %}
+        </div>
+        <div>
+            {{ form.category.label }}<br>
+            {{ form.category(class="form-control") }}<br>
+            {% for error in form.category.errors %}
+                <span style="color: red;">{{ error }}</span><br>
+            {% endfor %}
+        </div>
+        <button type="submit">Add Expense</button>
+    </form>
+
+{% endblock %}

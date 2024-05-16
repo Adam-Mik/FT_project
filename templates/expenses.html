@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Try 1{% endblock %}
+
+{% block content %}
+
+<h2>All expenses</h2>
+    <ul>
+        {% for expense, category in expenses_with_categories %}
+            <li>{{ expense.name }} - {{ expense.value }} - {{ category.name }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

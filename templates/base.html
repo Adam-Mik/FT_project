@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<h2><a href="/">Home page</a></h2>
+<h2 class="klasa"><a href="/category">Add category</a></h2>
+<h2><a href="/summary">Expense summary</a></h2>
+<h2><a href="/expenses">All expenses</a></h2>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

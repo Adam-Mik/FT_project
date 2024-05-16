@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Try 1{% endblock %}
+
+{% block content %}
+
+<div>
+    <h2>Total expenses:</h2>
+    {{ sum_all }}
+    <h2>Expenses per category [%]:</h2>
+
+    <ul>
+        {% for category, expense, i in category_expenses %}
+            <li>{{ category }} - {{ expense }} - {{ i }} %</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock %}
